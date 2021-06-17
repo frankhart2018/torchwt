@@ -1,0 +1,22 @@
+[
+    {
+        "type": "linear",
+        "args": {
+            "in_features": 1,
+            "out_features": 10,
+            "bias": "false",
+            "activation": "relu"
+        }
+    },
+
+    {
+        "type": "linear",
+        "args": {
+            "in_features": 10,
+            "out_features": 1,
+            "bias": "false",
+            "activation": "none"
+        }
+    }
+    
+]
