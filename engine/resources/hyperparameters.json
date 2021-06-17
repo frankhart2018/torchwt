@@ -1,0 +1,18 @@
+{
+    "model": {},
+    "loss": {
+        "type": "mse"
+    },
+    "optimizer": {
+        "type": "adam",
+        "args": {
+            "lr": 0.001
+        }
+    },
+    "training": {
+        "args": {
+            "epochs": 2
+        }
+    },
+    "valid": {}
+}
