@@ -5,9 +5,9 @@ import torch.nn as nn
 import json
 import os
 
-from utils import errors
-from utils import json_reader
-import layer_parser
+from .utils import errors
+from .utils import json_reader
+from .layer_parser import LayerParser
 
 
 class Model(nn.Module):
@@ -33,7 +33,7 @@ class Model(nn.Module):
         model_ordered_dict = OrderedDict()
 
         for layer_num, layer_dict in enumerate(self.__model_spec):
-            model_ordered_dict.update(layer_parser.LayerParser.parse_layer(layer_dict=layer_dict, layer_num=layer_num))
+            model_ordered_dict.update(LayerParser.parse_layer(layer_dict=layer_dict, layer_num=layer_num))
 
         model = nn.Sequential(
             model_ordered_dict
