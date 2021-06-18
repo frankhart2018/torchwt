@@ -14,5 +14,11 @@
             "epochs": 2
         }
     },
-    "valid": {}
+    "valid": {},
+    "dataset": {
+        "args": {
+            "batch_size": 64,
+            "shuffle": "True"
+        }
+    }
 }

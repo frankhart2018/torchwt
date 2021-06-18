@@ -3,6 +3,7 @@ import torch
 from engine.components.model import Model
 from engine.components.loss import Loss
 from engine.components.optimizer import Optimizer
+from engine.components.dataloaders.image_classification import ImageClassificationLoader
 
 
 if __name__ == "__main__":
@@ -18,3 +19,5 @@ if __name__ == "__main__":
 
     o = Optimizer(model=m, hyperparameter_spec_file="engine/resources/hyperparameters.json")
     print(o.optimizer)
+
+    icl = ImageClassificationLoader(hyperparameter_spec_file="engine/resources/hyperparameters.json")
