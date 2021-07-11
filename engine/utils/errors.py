@@ -15,3 +15,7 @@ class ModelFileNotFound(CustomException):
 class HyperparameterFileNotFound(CustomException):
     def __init__(self, message):
         super().__init__(message)
+
+class NoFileForExtensionFound(CustomException):
+    def __init__(self, message):
+        super().__init__(message)
