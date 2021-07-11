@@ -5,28 +5,30 @@ from engine.components.loss import Loss
 from engine.components.optimizer import Optimizer
 from engine.components.dataloaders.image_classification.dataloader import ImageClassificationLoader
 from engine.components.trainers.classification import ClassificationTrainer
+from engine.utils import model_input
 
 
 if __name__ == "__main__":
-    m = Model(model_spec_file="engine/resources/model.json")
+    model_input = model_input.ModelInput(
+        model_spec_file="engine/resources/model.json",
+        hyperparameter_spec_file="engine/resources/hyperparameters.json",
+    )
 
-    # print(m)
+    model = Model(model_spec_file=model_input.model_spec_file)
 
-    l = Loss(hyperparameter_spec_file="engine/resources/hyperparameters.json")
-    # # print(l.loss_func)
+    loss = Loss(hyperparameter_spec_file=model_input.hyperparameter_spec_file)
 
-    o = Optimizer(model=m, hyperparameter_spec_file="engine/resources/hyperparameters.json")
-    # # print(o.optimizer)
+    optimizer = Optimizer(model=model, hyperparameter_spec_file=model_input.hyperparameter_spec_file)
 
-    icl = ImageClassificationLoader(hyperparameter_spec_file="engine/resources/hyperparameters.json", image_dir="test-dir")
+    icl = ImageClassificationLoader(hyperparameter_spec_file=model_input.hyperparameter_spec_file, image_dir="test-dir")
     train_loader, valid_loader, num_files = icl.get_dataloader()
 
     trainer = ClassificationTrainer(
-        model=m, 
+        model=model, 
         train_loader=train_loader, 
         valid_loader=valid_loader, 
-        loss_fn=l, 
-        optimizer=o,
-        hyperparameter_spec_file="engine/resources/hyperparameters.json",
+        loss_fn=loss, 
+        optimizer=optimizer,
+        hyperparameter_spec_file=model_input.hyperparameter_spec_file,
     )
     trainer.train(verbose=True)
