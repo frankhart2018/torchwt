@@ -18,7 +18,7 @@ class ImageClassificationDataset(Dataset):
         self.__classes = [os.path.split(os.path.dirname(file_path))[1] for file_path in self.__file_paths]
         self.__n_classes = len(set(self.__classes))
         
-        for idx, class_ in enumerate(self.__classes):
+        for idx, class_ in enumerate(set(self.__classes)):
             self.__classes_to_idx[class_] = idx
             self.__idx_to_classes[idx] = class_
 
@@ -39,7 +39,7 @@ class ImageClassificationDataset(Dataset):
 
     def __getitem__(self, idx):
         file_path = self.__file_paths[idx]
-        label = self.__classes[idx]
+        label = self.__classes_to_idx[self.__classes[idx]]
 
         img = cv2.imread(filename=file_path)
         img = cv2.cvtColor(src=img, code=cv2.COLOR_BGR2RGB)

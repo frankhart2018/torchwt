@@ -17,8 +17,9 @@
     "valid": {},
     "dataset": {
         "args": {
-            "batch_size": 64,
-            "shuffle": "True"
+            "batch_size": 4,
+            "shuffle": "True",
+            "split_ratio": 0.8
         }
     }
 }
