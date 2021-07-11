@@ -1,20 +1,29 @@
 [
     {
-        "type": "linear",
+        "type": "conv2d",
         "args": {
-            "in_features": 1,
-            "out_features": 10,
-            "bias": "false",
+            "in_channels": 3,
+            "out_channels": 10,
+            "kernel_size": 3,
+            "stride": 1,
+            "padding": 0,
             "activation": "relu"
+        }
+    },
+
+    {
+        "type": "flatten",
+        "args": {
+            "activation": "none"
         }
     },
 
     {
         "type": "linear",
         "args": {
-            "in_features": 10,
+            "in_features": 38440,
             "out_features": 4,
-            "bias": "false",
+            "bias": "true",
             "activation": "none"
         }
     }

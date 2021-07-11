@@ -1,6 +1,7 @@
 from torch.utils.data import Dataset
 import cv2
 import os
+import torch
 
 
 class ImageClassificationDataset(Dataset):
@@ -43,8 +44,9 @@ class ImageClassificationDataset(Dataset):
 
         img = cv2.imread(filename=file_path)
         img = cv2.cvtColor(src=img, code=cv2.COLOR_BGR2RGB)
+        img = torch.FloatTensor(img).permute(2, 1, 0)
 
         return {
             "img": img,
-            "label": label,
+            "label": torch.tensor(label),
         }

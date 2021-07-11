@@ -12,21 +12,21 @@ if __name__ == "__main__":
 
     # print(m)
 
-    inp = torch.randn((1, 1))
-    # print(m(inp))
-
     l = Loss(hyperparameter_spec_file="engine/resources/hyperparameters.json")
-    # print(l.loss_func)
+    # # print(l.loss_func)
 
     o = Optimizer(model=m, hyperparameter_spec_file="engine/resources/hyperparameters.json")
-    # print(o.optimizer)
+    # # print(o.optimizer)
 
     icl = ImageClassificationLoader(hyperparameter_spec_file="engine/resources/hyperparameters.json", image_dir="test-dir")
     train_loader, valid_loader, num_files = icl.get_dataloader()
 
-    a = iter(train_loader)
-    b = next(a)
-    print(b['img'].shape)
-
-    trainer = ClassificationTrainer(model=m, train_loader=train_loader, valid_loader=valid_loader, loss_fn=l, optimizer=o)
-    # print(trainer.train_one_epoch())
+    trainer = ClassificationTrainer(
+        model=m, 
+        train_loader=train_loader, 
+        valid_loader=valid_loader, 
+        loss_fn=l, 
+        optimizer=o,
+        hyperparameter_spec_file="engine/resources/hyperparameters.json",
+    )
+    trainer.train(verbose=True)

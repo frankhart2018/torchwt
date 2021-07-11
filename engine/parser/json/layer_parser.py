@@ -8,6 +8,7 @@ from torch.nn.modules import activation
 LAYER_MAPPING = {
     "linear": nn.Linear,
     "conv2d": nn.Conv2d,
+    "flatten": nn.Flatten,
 }
 
 ACTIVATION_MAPPING = {
