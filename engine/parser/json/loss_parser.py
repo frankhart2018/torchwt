@@ -3,6 +3,7 @@ import torch.nn as nn
 
 LOSS_MAPPING = {
     "mse": nn.MSELoss,
+    "crossentropy": nn.CrossEntropyLoss,
 }
 
 class LossParser:

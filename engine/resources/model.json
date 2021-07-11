@@ -13,7 +13,7 @@
         "type": "linear",
         "args": {
             "in_features": 10,
-            "out_features": 1,
+            "out_features": 4,
             "bias": "false",
             "activation": "none"
         }

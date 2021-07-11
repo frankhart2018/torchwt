@@ -1,7 +1,7 @@
 {
     "model": {},
     "loss": {
-        "type": "mse"
+        "type": "crossentropy"
     },
     "optimizer": {
         "type": "adam",
