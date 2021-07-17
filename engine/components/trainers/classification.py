@@ -3,6 +3,7 @@ import torch
 from .return_tuples import epoch_results
 from ...utils import json_reader
 from ...utils import errors
+from ...utils import device
 from ...parser.json import training_args_parser
 
 
@@ -17,9 +18,6 @@ class ClassificationTrainer:
 
         self.__hyperparameter_spec = None
         self.__training_args = self.__parse_training_args()
-
-    def __get_device(self):
-        return torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
     def __read_training_args_from_json(self):
         return json_reader.JSONReader.read_json(
@@ -37,7 +35,7 @@ class ClassificationTrainer:
         return training_params
 
     def __train_one_epoch(self, verbose=False):
-        device = self.__get_device()
+        train_device = device.get_device()
         epoch_loss = 0.0
         epoch_accuracy = 0.0
 
@@ -45,8 +43,8 @@ class ClassificationTrainer:
 
         for i, data in enumerate(self.__train_loader):
             inputs, labels = data['img'], data['label']
-            inputs = inputs.to(device)
-            labels = labels.to(device)
+            inputs = inputs.to(train_device)
+            labels = labels.to(train_device)
 
             outputs = self.__model(inputs)
             loss = self.__loss_fn.loss_func(outputs, labels)
@@ -71,7 +69,7 @@ class ClassificationTrainer:
         return epoch_results(epoch_loss=epoch_loss, epoch_accuracy=epoch_accuracy)
 
     def __validate_one_epoch(self, verbose=False):
-        device = self.__get_device()
+        valid_device = device.get_device()
         epoch_loss = 0.0
         epoch_accuracy = 0.0
 
@@ -80,8 +78,8 @@ class ClassificationTrainer:
         with torch.no_grad():
             for i, data in enumerate(self.__valid_loader):
                 inputs, labels = data['img'], data['label']
-                inputs = inputs.to(device)
-                labels = labels.to(device)
+                inputs = inputs.to(valid_device)
+                labels = labels.to(valid_device)
 
                 outputs = self.__model(inputs)
                 loss = self.__loss_fn.loss_func(outputs, labels)
