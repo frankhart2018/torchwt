@@ -44,7 +44,7 @@ class ObjectDetectionDataset(Dataset):
 
         img = cv2.imread(filename=file_path)
         img = cv2.cvtColor(src=img, code=cv2.COLOR_BGR2RGB)
-        img = cv2.flip(src=img, flipCode=1)
+
         
         img = torch.FloatTensor(img).permute(2, 1, 0)
 
