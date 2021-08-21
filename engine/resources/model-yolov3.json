@@ -699,7 +699,7 @@
         "type": "conv2d",
         "args": {
             "in_channels": 2048,
-            "out_channels": "\"({{num_classes}}+5)*3\"",
+            "out_channels": 75,
             "kernel_size": 1,
             "stride": 1,
             "padding": 0,
@@ -802,7 +802,7 @@
         "type": "conv2d",
         "args": {
             "in_channels": 512,
-            "out_channels": "\"({{num_classes}}+5)*3\"",
+            "out_channels": 75,
             "kernel_size": 1,
             "stride": 1,
             "padding": 0,
@@ -869,7 +869,7 @@
         "type": "conv2d",
         "args": {
             "in_channels": 512,
-            "out_channels": "\"({{num_classes}}+5)*3\"",
+            "out_channels": 75,
             "kernel_size": 1,
             "stride": 1,
             "padding": 0,
