@@ -1,0 +1,880 @@
+[
+    {
+        "type": "conv2d",
+        "args": {
+            "in_channels": 3,
+            "out_channels": 32,
+            "kernel_size": 3,
+            "stride": 1,
+            "padding": 1,
+            "activation": "leakyrelu"
+        }
+    },
+
+    {
+        "type": "conv2d",
+        "args": {
+            "in_channels": 32,
+            "out_channels": 64,
+            "kernel_size": 3,
+            "stride": 2,
+            "padding": 1,
+            "activation": "leakyrelu"
+        }
+    },
+    
+    {
+        "type": "conv2d",
+        "args": {
+            "in_channels": 64,
+            "out_channels": 32,
+            "kernel_size": 1,
+            "stride": 1,
+            "padding": 0,
+            "activation": "leakyrelu"
+        }
+    },
+
+    {
+        "type": "conv2d",
+        "args": {
+            "in_channels": 32,
+            "out_channels": 64,
+            "kernel_size": 3,
+            "stride": 1,
+            "padding": 1,
+            "activation": "leakyrelu"
+        }
+    },
+
+    {
+        "type": "conv2d",
+        "args": {
+            "in_channels": 64,
+            "out_channels": 128,
+            "kernel_size": 3,
+            "stride": 2,
+            "padding": 1,
+            "activation": "leakyrelu"
+        }
+    },
+
+    {
+        "type": "conv2d",
+        "args": {
+            "in_channels": 128,
+            "out_channels": 64,
+            "kernel_size": 1,
+            "stride": 1,
+            "padding": 0,
+            "activation": "leakyrelu"
+        }
+    },
+
+    {
+        "type": "conv2d",
+        "args": {
+            "in_channels": 64,
+            "out_channels": 128,
+            "kernel_size": 3,
+            "stride": 1,
+            "padding": 1,
+            "activation": "leakyrelu"
+        }
+    },
+
+    {
+        "type": "conv2d",
+        "args": {
+            "in_channels": 128,
+            "out_channels": 64,
+            "kernel_size": 1,
+            "stride": 1,
+            "padding": 0,
+            "activation": "leakyrelu"
+        }
+    },
+
+    {
+        "type": "conv2d",
+        "args": {
+            "in_channels": 64,
+            "out_channels": 128,
+            "kernel_size": 3,
+            "stride": 1,
+            "padding": 1,
+            "activation": "leakyrelu"
+        }
+    },
+
+    {
+        "type": "conv2d",
+        "args": {
+            "in_channels": 128,
+            "out_channels": 256,
+            "kernel_size": 3,
+            "stride": 2,
+            "padding": 1,
+            "activation": "leakyrelu"
+        }
+    },
+
+    {
+        "type": "conv2d",
+        "args": {
+            "in_channels": 256,
+            "out_channels": 128,
+            "kernel_size": 1,
+            "stride": 1,
+            "padding": 0,
+            "activation": "leakyrelu"
+        }
+    },
+
+    {
+        "type": "conv2d",
+        "args": {
+            "in_channels": 128,
+            "out_channels": 256,
+            "kernel_size": 3,
+            "stride": 1,
+            "padding": 1,
+            "activation": "leakyrelu"
+        }
+    },
+
+    {
+        "type": "conv2d",
+        "args": {
+            "in_channels": 256,
+            "out_channels": 128,
+            "kernel_size": 1,
+            "stride": 1,
+            "padding": 0,
+            "activation": "leakyrelu"
+        }
+    },
+
+    {
+        "type": "conv2d",
+        "args": {
+            "in_channels": 128,
+            "out_channels": 256,
+            "kernel_size": 3,
+            "stride": 1,
+            "padding": 1,
+            "activation": "leakyrelu"
+        }
+    },
+
+    {
+        "type": "conv2d",
+        "args": {
+            "in_channels": 256,
+            "out_channels": 128,
+            "kernel_size": 1,
+            "stride": 1,
+            "padding": 0,
+            "activation": "leakyrelu"
+        }
+    },
+
+    {
+        "type": "conv2d",
+        "args": {
+            "in_channels": 128,
+            "out_channels": 256,
+            "kernel_size": 3,
+            "stride": 1,
+            "padding": 1,
+            "activation": "leakyrelu"
+        }
+    },
+
+    {
+        "type": "conv2d",
+        "args": {
+            "in_channels": 256,
+            "out_channels": 128,
+            "kernel_size": 1,
+            "stride": 1,
+            "padding": 0,
+            "activation": "leakyrelu"
+        }
+    },
+
+    {
+        "type": "conv2d",
+        "args": {
+            "in_channels": 128,
+            "out_channels": 256,
+            "kernel_size": 3,
+            "stride": 1,
+            "padding": 1,
+            "activation": "leakyrelu"
+        }
+    },
+
+    {
+        "type": "conv2d",
+        "args": {
+            "in_channels": 256,
+            "out_channels": 128,
+            "kernel_size": 1,
+            "stride": 1,
+            "padding": 0,
+            "activation": "leakyrelu"
+        }
+    },
+
+    {
+        "type": "conv2d",
+        "args": {
+            "in_channels": 128,
+            "out_channels": 256,
+            "kernel_size": 3,
+            "stride": 1,
+            "padding": 1,
+            "activation": "leakyrelu"
+        }
+    },
+
+    {
+        "type": "conv2d",
+        "args": {
+            "in_channels": 256,
+            "out_channels": 128,
+            "kernel_size": 1,
+            "stride": 1,
+            "padding": 0,
+            "activation": "leakyrelu"
+        }
+    },
+
+    {
+        "type": "conv2d",
+        "args": {
+            "in_channels": 128,
+            "out_channels": 256,
+            "kernel_size": 3,
+            "stride": 1,
+            "padding": 1,
+            "activation": "leakyrelu"
+        }
+    },
+
+    {
+        "type": "conv2d",
+        "args": {
+            "in_channels": 256,
+            "out_channels": 128,
+            "kernel_size": 1,
+            "stride": 1,
+            "padding": 0,
+            "activation": "leakyrelu"
+        }
+    },
+
+    {
+        "type": "conv2d",
+        "args": {
+            "in_channels": 128,
+            "out_channels": 256,
+            "kernel_size": 3,
+            "stride": 1,
+            "padding": 1,
+            "activation": "leakyrelu"
+        }
+    },
+
+    {
+        "type": "conv2d",
+        "args": {
+            "in_channels": 256,
+            "out_channels": 128,
+            "kernel_size": 1,
+            "stride": 1,
+            "padding": 0,
+            "activation": "leakyrelu"
+        }
+    },
+
+    {
+        "type": "conv2d",
+        "args": {
+            "in_channels": 128,
+            "out_channels": 256,
+            "kernel_size": 3,
+            "stride": 1,
+            "padding": 1,
+            "activation": "leakyrelu"
+        }
+    },
+
+    {
+        "type": "conv2d",
+        "args": {
+            "in_channels": 256,
+            "out_channels": 512,
+            "kernel_size": 3,
+            "stride": 2,
+            "padding": 1,
+            "activation": "leakyrelu"
+        }
+    },
+
+    {
+        "type": "conv2d",
+        "args": {
+            "in_channels": 512,
+            "out_channels": 256,
+            "kernel_size": 1,
+            "stride": 1,
+            "padding": 0,
+            "activation": "leakyrelu"
+        }
+    },
+
+    {
+        "type": "conv2d",
+        "args": {
+            "in_channels": 256,
+            "out_channels": 512,
+            "kernel_size": 3,
+            "stride": 1,
+            "padding": 1,
+            "activation": "leakyrelu"
+        }
+    },
+
+    {
+        "type": "conv2d",
+        "args": {
+            "in_channels": 512,
+            "out_channels": 256,
+            "kernel_size": 1,
+            "stride": 1,
+            "padding": 0,
+            "activation": "leakyrelu"
+        }
+    },
+
+    {
+        "type": "conv2d",
+        "args": {
+            "in_channels": 256,
+            "out_channels": 512,
+            "kernel_size": 3,
+            "stride": 1,
+            "padding": 1,
+            "activation": "leakyrelu"
+        }
+    },
+
+    {
+        "type": "conv2d",
+        "args": {
+            "in_channels": 512,
+            "out_channels": 256,
+            "kernel_size": 1,
+            "stride": 1,
+            "padding": 0,
+            "activation": "leakyrelu"
+        }
+    },
+
+    {
+        "type": "conv2d",
+        "args": {
+            "in_channels": 256,
+            "out_channels": 512,
+            "kernel_size": 3,
+            "stride": 1,
+            "padding": 1,
+            "activation": "leakyrelu"
+        }
+    },
+
+    {
+        "type": "conv2d",
+        "args": {
+            "in_channels": 512,
+            "out_channels": 256,
+            "kernel_size": 1,
+            "stride": 1,
+            "padding": 0,
+            "activation": "leakyrelu"
+        }
+    },
+
+    {
+        "type": "conv2d",
+        "args": {
+            "in_channels": 256,
+            "out_channels": 512,
+            "kernel_size": 3,
+            "stride": 1,
+            "padding": 1,
+            "activation": "leakyrelu"
+        }
+    },
+
+    {
+        "type": "conv2d",
+        "args": {
+            "in_channels": 512,
+            "out_channels": 256,
+            "kernel_size": 1,
+            "stride": 1,
+            "padding": 0,
+            "activation": "leakyrelu"
+        }
+    },
+
+    {
+        "type": "conv2d",
+        "args": {
+            "in_channels": 256,
+            "out_channels": 512,
+            "kernel_size": 3,
+            "stride": 1,
+            "padding": 1,
+            "activation": "leakyrelu"
+        }
+    },
+
+    {
+        "type": "conv2d",
+        "args": {
+            "in_channels": 512,
+            "out_channels": 256,
+            "kernel_size": 1,
+            "stride": 1,
+            "padding": 0,
+            "activation": "leakyrelu"
+        }
+    },
+
+    {
+        "type": "conv2d",
+        "args": {
+            "in_channels": 256,
+            "out_channels": 512,
+            "kernel_size": 3,
+            "stride": 1,
+            "padding": 1,
+            "activation": "leakyrelu"
+        }
+    },
+
+    {
+        "type": "conv2d",
+        "args": {
+            "in_channels": 512,
+            "out_channels": 256,
+            "kernel_size": 1,
+            "stride": 1,
+            "padding": 0,
+            "activation": "leakyrelu"
+        }
+    },
+
+    {
+        "type": "conv2d",
+        "args": {
+            "in_channels": 256,
+            "out_channels": 512,
+            "kernel_size": 3,
+            "stride": 1,
+            "padding": 1,
+            "activation": "leakyrelu"
+        }
+    },
+
+    {
+        "type": "conv2d",
+        "args": {
+            "in_channels": 512,
+            "out_channels": 256,
+            "kernel_size": 1,
+            "stride": 1,
+            "padding": 0,
+            "activation": "leakyrelu"
+        }
+    },
+
+    {
+        "type": "conv2d",
+        "args": {
+            "in_channels": 256,
+            "out_channels": 512,
+            "kernel_size": 3,
+            "stride": 1,
+            "padding": 1,
+            "activation": "leakyrelu"
+        }
+    },
+
+    {
+        "type": "conv2d",
+        "args": {
+            "in_channels": 512,
+            "out_channels": 1024,
+            "kernel_size": 3,
+            "stride": 2,
+            "padding": 1,
+            "activation": "leakyrelu"
+        }
+    },
+
+    {
+        "type": "conv2d",
+        "args": {
+            "in_channels": 1024,
+            "out_channels": 512,
+            "kernel_size": 1,
+            "stride": 1,
+            "padding": 0,
+            "activation": "leakyrelu"
+        }
+    },
+
+    {
+        "type": "conv2d",
+        "args": {
+            "in_channels": 512,
+            "out_channels": 1024,
+            "kernel_size": 3,
+            "stride": 1,
+            "padding": 1,
+            "activation": "leakyrelu"
+        }
+    },
+
+    {
+        "type": "conv2d",
+        "args": {
+            "in_channels": 1024,
+            "out_channels": 512,
+            "kernel_size": 1,
+            "stride": 1,
+            "padding": 0,
+            "activation": "leakyrelu"
+        }
+    },
+
+    {
+        "type": "conv2d",
+        "args": {
+            "in_channels": 512,
+            "out_channels": 1024,
+            "kernel_size": 3,
+            "stride": 1,
+            "padding": 1,
+            "activation": "leakyrelu"
+        }
+    },
+
+    {
+        "type": "conv2d",
+        "args": {
+            "in_channels": 1024,
+            "out_channels": 512,
+            "kernel_size": 1,
+            "stride": 1,
+            "padding": 0,
+            "activation": "leakyrelu"
+        }
+    },
+
+    {
+        "type": "conv2d",
+        "args": {
+            "in_channels": 512,
+            "out_channels": 1024,
+            "kernel_size": 3,
+            "stride": 1,
+            "padding": 1,
+            "activation": "leakyrelu"
+        }
+    },
+
+    {
+        "type": "conv2d",
+        "args": {
+            "in_channels": 1024,
+            "out_channels": 512,
+            "kernel_size": 1,
+            "stride": 1,
+            "padding": 0,
+            "activation": "leakyrelu"
+        }
+    },
+
+    {
+        "type": "conv2d",
+        "args": {
+            "in_channels": 512,
+            "out_channels": 1024,
+            "kernel_size": 3,
+            "stride": 1,
+            "padding": 1,
+            "activation": "leakyrelu"
+        }
+    },
+
+    {
+        "type": "conv2d",
+        "args": {
+            "in_channels": 1024,
+            "out_channels": 512,
+            "kernel_size": 1,
+            "stride": 1,
+            "padding": 0,
+            "activation": "leakyrelu"
+        }
+    },
+
+    {
+        "type": "conv2d",
+        "args": {
+            "in_channels": 512,
+            "out_channels": 1024,
+            "kernel_size": 3,
+            "stride": 1,
+            "padding": 1,
+            "activation": "leakyrelu"
+        }
+    },
+
+    {
+        "type": "conv2d",
+        "args": {
+            "in_channels": 1024,
+            "out_channels": 512,
+            "kernel_size": 1,
+            "stride": 1,
+            "padding": 0,
+            "activation": "leakyrelu"
+        }
+    },
+
+    {
+        "type": "conv2d",
+        "args": {
+            "in_channels": 512,
+            "out_channels": 1024,
+            "kernel_size": 3,
+            "stride": 1,
+            "padding": 1,
+            "activation": "leakyrelu"
+        }
+    },
+
+    {
+        "type": "conv2d",
+        "args": {
+            "in_channels": 1024,
+            "out_channels": 512,
+            "kernel_size": 1,
+            "stride": 1,
+            "padding": 0,
+            "activation": "leakyrelu"
+        }
+    },
+
+    {
+        "type": "conv2d",
+        "args": {
+            "in_channels": 1024,
+            "out_channels": 2048,
+            "kernel_size": 3,
+            "stride": 1,
+            "padding": 1,
+            "activation": "leakyrelu"
+        }
+    },
+
+    {
+        "type": "conv2d",
+        "args": {
+            "in_channels": 2048,
+            "out_channels": 75,
+            "kernel_size": 1,
+            "stride": 1,
+            "padding": 0,
+            "activation": "leakyrelu"
+        }
+    },
+
+    {
+        "type": "conv2d",
+        "args": {
+            "in_channels": 512,
+            "out_channels": 256,
+            "kernel_size": 1,
+            "stride": 1,
+            "padding": 0,
+            "activation": "leakyrelu"
+        }
+    },
+
+    {
+        "type": "upsample",
+        "args": {
+            "scale_factor": 2
+        }
+    },
+
+    {
+        "type": "conv2d",
+        "args": {
+            "in_channels": 768,
+            "out_channels": 256,
+            "kernel_size": 1,
+            "stride": 1,
+            "padding": 0,
+            "activation": "leakyrelu"
+        }
+    },
+
+    {
+        "type": "conv2d",
+        "args": {
+            "in_channels": 256,
+            "out_channels": 512,
+            "kernel_size": 3,
+            "stride": 1,
+            "padding": 1,
+            "activation": "leakyrelu"
+        }
+    },
+
+    {
+        "type": "conv2d",
+        "args": {
+            "in_channels": 512,
+            "out_channels": 256,
+            "kernel_size": 1,
+            "stride": 1,
+            "padding": 0,
+            "activation": "leakyrelu"
+        }
+    },
+
+    {
+        "type": "conv2d",
+        "args": {
+            "in_channels": 256,
+            "out_channels": 512,
+            "kernel_size": 3,
+            "stride": 1,
+            "padding": 1,
+            "activation": "leakyrelu"
+        }
+    },
+
+    {
+        "type": "conv2d",
+        "args": {
+            "in_channels": 512,
+            "out_channels": 256,
+            "kernel_size": 1,
+            "stride": 1,
+            "padding": 0,
+            "activation": "leakyrelu"
+        }
+    },
+
+    {
+        "type": "conv2d",
+        "args": {
+            "in_channels": 256,
+            "out_channels": 512,
+            "kernel_size": 3,
+            "stride": 1,
+            "padding": 1,
+            "activation": "leakyrelu"
+        }
+    },
+
+    {
+        "type": "conv2d",
+        "args": {
+            "in_channels": 512,
+            "out_channels": 75,
+            "kernel_size": 1,
+            "stride": 1,
+            "padding": 0,
+            "activation": "leakyrelu"
+        }
+    },
+
+    {
+        "type": "conv2d",
+        "args": {
+            "in_channels": 256,
+            "out_channels": 128,
+            "kernel_size": 1,
+            "stride": 1,
+            "padding": 0,
+            "activation": "leakyrelu"
+        }
+    },
+
+    {
+        "type": "upsample",
+        "args": {
+            "scale_factor": 2
+        }
+    },
+
+    {
+        "type": "conv2d",
+        "args": {
+            "in_channels": 384,
+            "out_channels": 128,
+            "kernel_size": 1,
+            "stride": 1,
+            "padding": 0,
+            "activation": "leakyrelu"
+        }
+    },
+
+    {
+        "type": "conv2d",
+        "args": {
+            "in_channels": 128,
+            "out_channels": 256,
+            "kernel_size": 3,
+            "stride": 1,
+            "padding": 1,
+            "activation": "leakyrelu"
+        }
+    },
+
+    {
+        "type": "conv2d",
+        "args": {
+            "in_channels": 256,
+            "out_channels": 512,
+            "kernel_size": 3,
+            "stride": 1,
+            "padding": 1,
+            "activation": "leakyrelu"
+        }
+    },
+
+    {
+        "type": "conv2d",
+        "args": {
+            "in_channels": 512,
+            "out_channels": 75,
+            "kernel_size": 1,
+            "stride": 1,
+            "padding": 0,
+            "activation": "leakyrelu"
+        }
+    }
+
+]
