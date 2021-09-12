@@ -1,17 +1,15 @@
-import torch
-
-from engine.components.model import Model
-from engine.components.loss import Loss
-from engine.components.optimizer import Optimizer
-from engine.components.dataloaders.image_classification.dataloader import ImageClassificationLoader
-from engine.components.trainers.classification import ClassificationTrainer
-from engine.utils import model_input
+from torchwt.engine.components.model import Model
+from torchwt.engine.components.loss import Loss
+from torchwt.engine.components.optimizer import Optimizer
+from torchwt.engine.components.dataloaders.image_classification.dataloader import ImageClassificationLoader
+from torchwt.engine.components.trainers.classification import ClassificationTrainer
+from torchwt.engine.utils import model_input
 
 
 if __name__ == "__main__":
     model_input = model_input.ModelInput(
-        model_spec_file="engine/resources/model.json",
-        hyperparameter_spec_file="engine/resources/hyperparameters.json",
+        model_spec_file="torchwt/engine/resources/model.json",
+        hyperparameter_spec_file="torchwt/engine/resources/hyperparameters.json",
     )
 
     model = Model(model_spec_file=model_input.model_spec_file)
