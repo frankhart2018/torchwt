@@ -1,3 +1,6 @@
 __pycache__
 .vscode
 .DS_Store
+torchwt.egg-info/
+build/
+dist/
