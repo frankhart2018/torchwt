@@ -45,29 +45,3 @@ def build_hyperparams():
             json.dump(hyperparams_data, f, indent=4)
 
         return jsonify({"status": "success", "file_path": file_path})
-
-@app.route("/save-dataset", methods=['POST'])
-def save_dataset():
-
-    if request.method == "POST":
-        data = request.get_json()
-        dataset_path = data['dataset_path']
-        hyperparams_file_path = data['hyperparams_file_path']
-
-        if not os.path.exists(dataset_path):
-            return jsonify({"status": "error", "message": f"Dataset path {dataset_path} not found!"})
-
-        if not os.path.exists(hyperparams_file_path):
-            return jsonify({"status": "error", "message": f"Hyperparameter file {hyperparams_file_path} not found!"})
-
-        with open(hyperparams_file_path, "r") as f:
-            hyperparams = json.load(f)
-
-        hyperparams['dataset'] = {
-            "path": dataset_path,
-        }
-
-        with open(hyperparams_file_path, "w") as file:
-            json.dump(hyperparams, file, indent=4)
-
-        return jsonify({"status": "success"})
