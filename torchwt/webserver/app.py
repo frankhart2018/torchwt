@@ -1,11 +1,9 @@
 from flask import Flask, request, jsonify
-import time
 import os
-import random
-import hashlib
 import json
 
-from ..constants import MODELS_DIR_PATH
+from ..constants import MODELS_DIR_PATH, HYPERPARAMS_DIR_PATH
+from ..utils.file import get_random_file_name
 
 
 app = Flask(__name__)
@@ -24,14 +22,26 @@ def index():
 def build_model():
 
     if request.method == "POST":
-        data = request.get_json()
+        model_data = request.get_json()
         
-        file_name = str(round(time.time()) + random.randint(90, 100))
-        file_name = hashlib.sha512(file_name.encode()).hexdigest() + ".json"
-    
+        file_name = get_random_file_name()
         file_path = os.path.join(MODELS_DIR_PATH, file_name)
 
         with open(file_path, "w") as f:
-            json.dump(data, f, indent=4)
+            json.dump(model_data, f, indent=4)
+
+        return jsonify({"status": "success", "file_path": file_path})
+
+@app.route("/build-hyperparams", methods=["POST"])
+def build_hyperparams():
+
+    if request.method == "POST":
+        hyperparams_data = request.get_json()
+
+        file_name = get_random_file_name()
+        file_path = os.path.join(HYPERPARAMS_DIR_PATH, file_name)
+
+        with open(file_path, "w") as f:
+            json.dump(hyperparams_data, f, indent=4)
 
         return jsonify({"status": "success", "file_path": file_path})
